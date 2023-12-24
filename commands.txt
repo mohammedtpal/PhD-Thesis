@@ -1,0 +1,7 @@
+# How to know the file size:
+    ls -lh output.txt 
+
+# How to run the code:
+    ython3 compress_and_split.py 
+
+#
