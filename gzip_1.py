@@ -36,6 +36,6 @@ if __name__ == "__main__":
         encoded_chunks = encode_chunks_to_base64(chunks)
 
         # Print or save the encoded chunks with each chunk on a new line
-        with open("2.txt", "w") as output_file:
+        with open("1.txt", "w") as output_file:
             for i, chunk in enumerate(encoded_chunks):
-                output_file.write(f"Chunk {i+1}:\n{chunk}\n")
+                output_file.write(f"{chunk}\n")
