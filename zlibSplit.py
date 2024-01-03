@@ -24,7 +24,7 @@ def encode_chunks_to_base64(chunks):
 if __name__ == "__main__":
     input_file = "OOP.zip"  # Replace with your actual file name
     #chunk_size = 1024  # Set your desired chunk size
-    chunk_size = 2048 
+    chunk_size = 4 * 1024  # 4KB in bytes 
     # Check if the file exists
     if not os.path.isfile(input_file):
         print(f"Error: File '{input_file}' not found.")
