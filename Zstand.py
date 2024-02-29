@@ -34,7 +34,7 @@ def encode_chunks_to_base64(chunks):
 
 if __name__ == "__main__":
     input_file = "OOP.pdf"  # Replace with your actual file name
-    chunk_size = 1024  # Set your desired chunk size
+    chunk_size = 4*1024  # Set your desired chunk size
 
     # Check if the file exists
     if not os.path.isfile(input_file):
