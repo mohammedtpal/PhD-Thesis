@@ -1,7 +1,7 @@
 import base64
 import zlib
 import os
-
+import hashlib
 def compress_and_split(input_file, chunk_size):
     # Read the content of the file
     with open(input_file, 'rb') as f:
@@ -34,14 +34,15 @@ def encode_chunks_to_base64(chunks):
 
     return encoded_chunks
 
+def hash_file_name(file_name):
+    hasher = hashlib.sha256()
+    hasher.update(file_name.encode('utf-8'))
+    return hasher.hexdigest()
+
 if __name__ == "__main__":
-    input_file = "OOP.pdf"  # Replace with your actual file name
+    input_file = "10.5MB.pdf"  # Replace with your actual file name
     #chunk_size = 1024  # Set your desired chunk size
-<<<<<<< HEAD
-    chunk_size =  1024  # 4KB in bytes 
-=======
-    chunk_size = 1 * 1024  # 4KB in bytes 
->>>>>>> 1db4449 (commit)
+    chunk_size = 256 * 1024  # 4KB in bytes 
     # Check if the file exists
     if not os.path.isfile(input_file):
         print(f"Error: File '{input_file}' not found.")
@@ -54,7 +55,16 @@ if __name__ == "__main__":
 
         # Print or save the encoded chunks with each chunk on a new line
         with open("splitOutPut.txt", "w") as output_file:
+            chuksCount=0
             for i, chunk in enumerate(encoded_chunks):
                 output_file.write(f"{chunk}\n")
+                chuksCount=i
+
+        print(f"Number of chunks: {chuksCount+1}")
+        hashed_file_name = hash_file_name(input_file)
+        print("Hashed file name:", hashed_file_name)
+        with open("FileMetaDataOutPut.txt", "w") as output_file:
+            output_file.write(f"{hashed_file_name}\n")
+            output_file.write(str(chuksCount+1))
 
 
