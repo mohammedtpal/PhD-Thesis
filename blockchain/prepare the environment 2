@@ -1,0 +1,100 @@
+ sudo apt  install curl
+sudo apt  install docker.io
+
+
+#install go language
+wget https://go.dev/dl/go1.20.2.linux-amd64.tar.gz 
+sudo tar -xvf go1.20.2.linux-amd64.tar.gz
+sudo mv go /usr/local
+mkdir -p $HOME/go/src/github.com/mohammedt.pal@gmail.com
+
+sudo nano ~/.bashrc
+# then add the following lines at the end of the file:
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/muhammed/go/src/github.com/mohammedt.pal@gmail.com
+#export         GOPATH=/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+#install the docker:
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# install fabric:
+curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh && chmod +x install-fabric.sh
+./install-fabric.sh docker samples binary
+cd fabric-samples/test-network
+./network.sh up createChannel -ca -c mychannel -s couchdb
+./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
+./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
+./install-fabric.sh -h
+./network.sh down
+
+
+
+
+
+
+#install docker composer
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose 
+sudo chmod +x /usr/local/bin/docker-compose
+sudo docker-compose --version
+sudo chmod 666 /var/run/docker.sock
+
+
+
+sudo apt update
+sudo docker run hello-world
+sudo usermod -a -G docker $USER
+sudo reboot
+sudo docker run hello-world
+sudo apt update
+sudo apt install git
+git --version
+
+
+#install nodejs
+sudo apt-get update
+sudo apt-get install nodejs
+node --version
+
+#install lib tools
+sudo apt-get install libltdl-dev
+
+#install python
+sudo apt-get install python
+python3 --version
+
+
+#install vs-code:
+sudo apt update && sudo apt upgrade -y
+sudo apt install software-properties-common apt-transport-https wget -y
+wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
+
+echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
+
+sudo apt update
+sudo apt install code
+
+
+#install java JDK 8:
+
+sudo apt update
+sudo apt install openjdk-8-jdk
+java -version
+
+
+# run hyperledger fabric:
+	## open the terminal and navigate to test network and bring up the network
+	./network.sh up 
+	## to list the running peers and Organiztaions:
+	docker container ls
+	## create channel ....you have to fill the script in /home/muhammed/go/src/github.com/		mohammedt.pal@gmail.com/fabric-samples/test-network/scripts/createChannel.sh
+...... with the configuration of the channel for example what organisation will be joined to the channel  the defualt name of the channel ...ect:
+	./network.sh createChannel
+
+
+	
+
+
+
+
