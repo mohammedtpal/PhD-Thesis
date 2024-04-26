@@ -36,5 +36,5 @@ export CORE_PEER_ADDRESS=localhost:7051
 
 
 
-peer chaincode query -C mychannel -n basic1 -c "{\"Args\":[\"GetFileEntry\", \"file1\"]}"
+peer chaincode query -C mychannel -n basic1 -c "{\"Args\":[\"GetFileEntry\", \"file\"]}"
 	

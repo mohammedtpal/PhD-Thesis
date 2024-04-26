@@ -12,6 +12,7 @@ import (
 type Asset struct {
 	ChunkID   string `json:"chunkid"`
 	ChunkData []byte `json:"chunkdata"`
+	FileID      string `json:"fileID"`
 
 }
 
@@ -20,7 +21,7 @@ type Asset struct {
 type QueryResponse struct {
 	ChunkID   string `json:"chunkid"`
 	ChunkData string `json:"chunkdata"`
-}
+	
 // SmartContract is the smart contract
 type SmartContract struct {
 	contractapi.Contract
@@ -101,8 +102,8 @@ func (c *SmartContract) QueryAsset(ctx contractapi.TransactionContextInterface, 
 }
 
 // AssetExists returns true when asset with given ID exists in world state
-func (s *SmartContract) AssetExists(ctx contractapi.TransactionContextInterface, id string) (bool, error) {
-	assetJSON, err := ctx.GetStub().GetState(id)
+func (s *SmartContract) AssetExists(ctx contractapi.TransactionContextInterface,chunkID string) (bool, error) {
+	assetJSON, err := ctx.GetStub().GetState(chunkID)
 	if err != nil {
 		return false, fmt.Errorf("failed to read from world state: %v", err)
 	}
