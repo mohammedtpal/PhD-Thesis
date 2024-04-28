@@ -1,6 +1,8 @@
 import base64
 import zlib
 import os
+import zstandard as zstd
+
 
 def decode_base64_to_bytes(encoded_chunks):
     # Decode each Base64 chunk to bytes
@@ -13,8 +15,9 @@ def decompress_and_reconstruct(decoded_chunks):
     compressed_data = b''.join(decoded_chunks)
 
     # Decompress the data
-    original_data = zlib.decompress(compressed_data)
-
+    # original_data = zlib.decompress(compressed_data)
+    decompressor = zstd.ZstdDecompressor()
+    original_data = decompressor.decompress(compressed_data)
     return original_data
 
 def save_original_file(original_data, output_file):
@@ -24,15 +27,15 @@ def save_original_file(original_data, output_file):
 
 if __name__ == "__main__":
     #input_file = "OOP.rar"  # Replace with your actual file name
-    chunk_size = 2048 
-    output_file = "reconstructed_OOP.zip"  # Replace with your desired output file name
+    chunk_size = 4*1024 
+    output_file = "reconstructed_File.pdf"  # Replace with your desired output file name
 
     # Check if the file exists
-    if not os.path.isfile("GoOutPutBase64.txt"):
-        print(f"Error: File 'GoOutPutBase64.txt' not found.")
+    if not os.path.isfile("inputBase64.txt"):
+        print(f"Error: File 'inputBase64.txt' not found.")
     else:
         # Read the encoded chunks from the file
-        with open("GoOutPutBase64.txt", "r") as input_file:
+        with open("inputBase64.txt", "r") as input_file:
             encoded_chunks = [line.strip() for line in input_file]
 
         # Decode Base64 to bytes

@@ -4,5 +4,5 @@ npm start
 
 ##to save the change and recompile the applicaton:
 
-npm start
+npm run build
 
