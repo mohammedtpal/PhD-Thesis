@@ -40,7 +40,7 @@ def hash_file_name(file_name):
     return hasher.hexdigest()
 
 if __name__ == "__main__":
-    input_file = "100KB.pdf"  # Replace with your actual file name
+    input_file = "TestFiles/1MB.pdf"  # Replace with your actual file name
     #chunk_size = 1024  # Set your desired chunk size
     chunk_size = 256 * 1024  # 4KB in bytes 
     # Check if the file exists

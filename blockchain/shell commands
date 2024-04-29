@@ -1,0 +1,14 @@
+# after running the test network:
+#you can check the docker:
+docker ps
+
+
+#to see the ledger size you to enter to the following:
+docker exec -it peer0.org1.example.com /bin/bash
+
+# then go to:
+cd /var/hyperledger/production/
+
+
+# then you can list the folder and thier sizes:
+du -sh *

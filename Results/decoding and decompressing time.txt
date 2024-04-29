@@ -1,0 +1,61 @@
+Time consumed to decode the chunks: 0.0003 seconds
+Time consumed to decompress the chunks: 0.0004 seconds
+Time consumed to save original file: 0.0012 seconds
+Size of original data: 102602 bytes
+
+Time consumed to decode the chunks: 0.0006 seconds
+Time consumed to decompress the chunks: 0.0002 seconds
+Time consumed to save original file: 0.0006 seconds
+Size of original data: 266603 bytes
+
+Time consumed to decode the chunks: 0.0009 seconds
+Time consumed to decompress the chunks: 0.0003 seconds
+Time consumed to save original file: 0.0006 seconds
+Size of original data: 359075 bytes
+
+Time consumed to decode the chunks: 0.0006 seconds
+Time consumed to decompress the chunks: 0.0004 seconds
+Time consumed to save original file: 0.0012 seconds
+Size of original data: 422552 bytes
+
+Time consumed to decode the chunks: 0.0012 seconds
+Time consumed to decompress the chunks: 0.0005 seconds
+Time consumed to save original file: 0.0016 seconds
+Size of original data: 512088 bytes
+
+Time consumed to decode the chunks: 0.0041 seconds
+Time consumed to decompress the chunks: 0.0007 seconds
+Time consumed to save original file: 0.0021 seconds
+Size of original data: 829048 bytes
+
+Time consumed to decode the chunks: 0.0032 seconds
+Time consumed to decompress the chunks: 0.0013 seconds
+Time consumed to save original file: 0.0022 seconds
+Size of original data: 1052352 bytes
+
+Time consumed to decode the chunks: 0.0016 seconds
+Time consumed to decompress the chunks: 0.0016 seconds
+Time consumed to save original file: 0.0035 seconds
+Size of original data: 1664464 bytes
+
+Time consumed to decode the chunks: 0.0051 seconds
+Time consumed to decompress the chunks: 0.0016 seconds
+Time consumed to save original file: 0.0021 seconds
+Size of original data: 1821766 bytes
+
+Time consumed to decode the chunks: 0.0116 seconds
+Time consumed to decompress the chunks: 0.0032 seconds
+Time consumed to save original file: 0.0048 seconds
+Size of original data: 4293938 bytes
+
+Time consumed to decode the chunks: 0.0196 seconds
+Time consumed to decompress the chunks: 0.0060 seconds
+Time consumed to save original file: 0.0093 seconds
+Size of original data: 5842628 bytes
+
+Time consumed to decode the chunks: 0.0061 seconds
+Time consumed to decompress the chunks: 0.0066 seconds
+Time consumed to save original file: 0.0207 seconds
+Size of original data: 11081517 bytes
+
+

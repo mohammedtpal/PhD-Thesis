@@ -39,8 +39,11 @@ def hash_file_name(file_name):
     return hasher.hexdigest()
 
 if __name__ == "__main__":
-    input_file = "100KB.pdf"  # Replace with your actual file name
-    chunk_size = 4*1024  # Set your desired chunk size
+    fileName="4"
+    SavePathChunks="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/256KB-Chunk"
+    SavePathMeat="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/FilesMetaData"
+    input_file = f"TestFiles/{fileName}.pdf"  # Replace with your actual file name
+    chunk_size = 256*1024  # Set your desired chunk size
 
     # Check if the file exists
     if not os.path.isfile(input_file):
@@ -53,7 +56,7 @@ if __name__ == "__main__":
         encoded_chunks = encode_chunks_to_base64(chunks)
 
         # Print or save the encoded chunks with each chunk on a new line
-        with open("3.txt", "w") as output_file:
+        with open(f"{SavePathChunks}/{fileName}.txt", "w") as output_file:
             for i, chunk in enumerate(encoded_chunks):
                 output_file.write(f"{chunk}\n")
                 chuksCount=i
@@ -61,6 +64,6 @@ if __name__ == "__main__":
         print(f"Number of chunks: {chuksCount+1}")
         hashed_file_name = hash_file_name(input_file)
         print("Hashed file name:", hashed_file_name)
-        with open("FileMetaDataOutPut.txt", "w") as output_file:
+        with open(f"{SavePathMeat}/{fileName}.txt", "w") as output_file:
             output_file.write(f"{hashed_file_name}\n")
             output_file.write(str(chuksCount+1))

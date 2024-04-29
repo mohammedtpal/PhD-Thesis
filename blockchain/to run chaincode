@@ -10,6 +10,8 @@ run commnands for hyperledger:
 
 ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
 
+./network.sh deployCC -ccn basic1 -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
+
   
 ## set the working peer:
 
