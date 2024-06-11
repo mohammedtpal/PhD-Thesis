@@ -9,5 +9,8 @@ npm run build
 
 ### the new version gives you the ability to send the file name during the code running like the following:
 
+npm start save 100KB
+npm start get 100KB
 
+### since every thing is configured in the app.ts file related the file type and location of data and meta data files and thier pathes.
 

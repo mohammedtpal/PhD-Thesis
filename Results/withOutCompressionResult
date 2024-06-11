@@ -5,6 +5,9 @@ Total Read time taken: 64 milliseconds
 Time consumed to decode the chunks: 0.0003 seconds
 Time consumed to save original file: 0.0004 seconds
 Size of original data: 102602 bytes
+Total size of all chunks: 102602 bytes
+Total size of encoded_chunks: 136804 bytes
+Number of chunks: 1
 
 
 260KB
@@ -13,7 +16,9 @@ Total Read time taken: 72 milliseconds
 Time consumed to decode the chunks: 0.0010 seconds
 Time consumed to save original file: 0.0008 seconds
 Size of original data: 266603 bytes
-
+Total size of all chunks: 266603 bytes
+Total size of encoded_chunks: 355476 bytes
+Number of chunks: 2
 
 350KB
 Total Save time taken: 4246 milliseconds
@@ -21,6 +26,9 @@ Total Read time taken: 76 milliseconds
 Time consumed to decode the chunks: 0.0011 seconds
 Time consumed to save original file: 0.0005 seconds
 Size of original data: 359075 bytes
+Total size of all chunks: 359075 bytes
+Total size of encoded_chunks: 478772 bytes
+Number of chunks: 2
 
 412KB
 Total Save time taken: 4340 milliseconds
@@ -28,6 +36,10 @@ Total Read time taken: 84 milliseconds
 Time consumed to decode the chunks: 0.0014 seconds
 Time consumed to save original file: 0.0006 seconds
 Size of original data: 422552 bytes
+Total size of all chunks: 422552 bytes
+Total size of encoded_chunks: 563408 bytes
+Number of chunks: 2
+
 
 500KB
 Total Save time taken: 2327 milliseconds
@@ -35,6 +47,10 @@ Total Read time taken: 90 milliseconds
 Time consumed to decode the chunks: 0.0016 seconds
 Time consumed to save original file: 0.0006 seconds
 Size of original data: 512088 bytes
+Total size of all chunks: 512088 bytes
+Total size of encoded_chunks: 682788 bytes
+Number of chunks: 2
+
 
 800KB
 Total Save time taken: 4496 milliseconds
@@ -42,6 +58,11 @@ Total Read time taken: 120 milliseconds
 Time consumed to decode the chunks: 0.0029 seconds
 Time consumed to save original file: 0.0010 seconds
 Size of original data: 829048 bytes
+Total size of all chunks: 829048 bytes
+Total size of encoded_chunks: 1105408 bytes
+Number of chunks: 4
+
+
 
 1MB
 Total Save time taken: 4576 milliseconds
@@ -49,6 +70,10 @@ Total Read time taken: 150 milliseconds
 Time consumed to decode the chunks: 0.0031 seconds
 Time consumed to save original file: 0.0010 seconds
 Size of original data: 1052352 bytes
+Total size of all chunks: 1052352 bytes
+Total size of encoded_chunks: 1403148 bytes
+Number of chunks: 5
+
 
 1.5MB
 Total Save time taken: 4841 milliseconds
@@ -56,6 +81,10 @@ Total Read time taken: 249 milliseconds
 Time consumed to decode the chunks: 0.0055 seconds
 Time consumed to save original file: 0.0013 seconds
 Size of original data: 1664464 bytes
+Total size of all chunks: 1664464 bytes
+Total size of encoded_chunks: 2219304 bytes
+Number of chunks: 7
+
 
 1.73MB
 Total Save time taken: 2917 milliseconds
@@ -63,6 +92,11 @@ Total Read time taken: 202 milliseconds
 Time consumed to decode the chunks: 0.0140 seconds
 Time consumed to save original file: 0.0017 seconds
 Size of original data: 1821766 bytes
+Total size of all chunks: 1821766 bytes
+Total size of encoded_chunks: 2429040 bytes
+Number of chunks: 7
+
+
 
 4MB
 Total Save time taken: 6092 milliseconds
@@ -70,6 +104,10 @@ Total Read time taken: 442 milliseconds
 Time consumed to decode the chunks: 0.0215 seconds
 Time consumed to save original file: 0.0045 seconds
 Size of original data: 4293938 bytes
+Total size of all chunks: 4293938 bytes
+Total size of encoded_chunks: 5725296 bytes
+Number of chunks: 17
+
 
 5.8MB
 Total Save time taken: 6714 milliseconds
@@ -77,6 +115,10 @@ Total Read time taken: 560 milliseconds
 Time consumed to decode the chunks: 0.0264 seconds
 Time consumed to save original file: 0.0144 seconds
 Size of original data: 5842628 bytes
+Total size of all chunks: 5842628 bytes
+Total size of encoded_chunks: 7790232 bytes
+Number of chunks: 23
+
 
 10.5MB
 Total Save time taken: 9767 milliseconds
@@ -84,7 +126,9 @@ Total Read time taken: 1119 milliseconds
 Time consumed to decode the chunks: 0.0511 seconds
 Time consumed to save original file: 0.0101 seconds
 Size of original data: 11081517 bytes
-
+Total size of all chunks: 11081517 bytes
+Total size of encoded_chunks: 14775468 bytes
+Number of chunks: 43
 
 
 

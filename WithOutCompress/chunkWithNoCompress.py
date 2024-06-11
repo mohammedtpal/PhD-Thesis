@@ -18,7 +18,7 @@ def compress_and_split(input_file, chunk_size):
     compressed_size_bytes = len(compressed_data)
 
     print(f"Size of original data: {original_size_bytes} bytes")
-    print(f"Size of compressed data: {compressed_size_bytes} bytes")
+    # print(f"Size of compressed data: {compressed_size_bytes} bytes")
 
     # Split the compressed data into chunks
     chunks = [compressed_data[i:i+chunk_size] for i in range(0, len(compressed_data), chunk_size)]
@@ -40,7 +40,7 @@ def hash_file_name(file_name):
     return hasher.hexdigest()
 
 if __name__ == "__main__":
-    fileName="800KB"
+    fileName="10.5MB"
     SavePathChunks="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/256KB-NoCompress"
     SavePathMeat="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/FilesMetaData"
     input_file = f"TestFiles/{fileName}.pdf"  # Replace with your actual file name
