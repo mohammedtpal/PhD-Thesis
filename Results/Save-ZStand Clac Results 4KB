@@ -1,0 +1,112 @@
+
+
+
+Size of original data: 102602 bytes
+Size of compressed data: 77985 bytes
+Total size of all chunks: 77985 bytes
+Total number of chunks: 20
+Time consumed to chunk the file: 0.0001 seconds
+Total size of encoded_chunks: 104032 bytes
+Time consumed to encode chunks to Base64: 0.0001 seconds
+Total save time taken: 40805 milliseconds
+
+
+Size of original data: 266603 bytes
+Size of compressed data: 187461 bytes
+Total size of all chunks: 187461 bytes
+Total number of chunks: 46
+Time consumed to chunk the file: 0.0002 seconds
+Total size of encoded_chunks: 250068 bytes
+Time consumed to encode chunks to Base64: 0.0005 seconds
+Total save time taken: 93688 milliseconds
+
+
+Size of original data: 359075 bytes
+Size of compressed data: 253832 bytes
+Total size of all chunks: 253832 bytes
+Total number of chunks: 62
+Time consumed to chunk the file: 0.0002 seconds
+Total size of encoded_chunks: 338608 bytes
+Time consumed to encode chunks to Base64: 0.0011 seconds
+Total save time taken: 126077 milliseconds
+
+Size of original data: 422552 bytes
+Size of compressed data: 196232 bytes
+Total size of all chunks: 196232 bytes
+Total number of chunks: 48
+Time consumed to chunk the file: 0.0002 seconds
+Total size of encoded_chunks: 261768 bytes
+Time consumed to encode chunks to Base64: 0.0005 seconds
+Total save time taken: 97605 milliseconds
+
+Size of original data: 512088 bytes
+Size of compressed data: 311796 bytes
+Total size of all chunks: 311796 bytes
+Total number of chunks: 77
+Time consumed to chunk the file: 0.0003 seconds
+Total size of encoded_chunks: 415932 bytes
+Time consumed to encode chunks to Base64: 0.0014 seconds
+Total save time taken: 156531 milliseconds
+
+Size of original data: 829048 bytes
+Size of compressed data: 741722 bytes
+Total size of all chunks: 741722 bytes
+Total number of chunks: 182
+Time consumed to chunk the file: 0.0005 seconds
+Total size of encoded_chunks: 989448 bytes
+Time consumed to encode chunks to Base64: 0.0020 seconds
+Total save time taken: 370133 milliseconds
+
+Size of original data: 1052352 bytes
+Size of compressed data: 881284 bytes
+Total size of all chunks: 881284 bytes
+Total number of chunks: 216
+Time consumed to chunk the file: 0.0006 seconds
+Total size of encoded_chunks: 1175620 bytes
+Time consumed to encode chunks to Base64: 0.0023 seconds
+Total save time taken: 438965 milliseconds
+
+Size of original data: 1664464 bytes
+Size of compressed data: 466725 bytes
+Total size of all chunks: 466725 bytes
+Total number of chunks: 114
+Time consumed to chunk the file: 0.0004 seconds
+Total size of encoded_chunks: 622604 bytes
+Time consumed to encode chunks to Base64: 0.0021 seconds
+Total save time taken: 231815 milliseconds
+
+
+Size of original data: 1821766 bytes
+Size of compressed data: 1280137 bytes
+Total size of all chunks: 1280137 bytes
+Total number of chunks: 313
+Time consumed to chunk the file: 0.0008 seconds
+Total size of encoded_chunks: 1707684 bytes
+Time consumed to encode chunks to Base64: 0.0034 seconds
+Total save time taken: 636022 milliseconds
+
+Size of original data: 4293938 bytes
+Size of compressed data: 3354594 bytes
+Total size of all chunks: 3354594 bytes
+Total number of chunks: 819
+Time consumed to chunk the file: 0.0019 seconds
+Total size of encoded_chunks: 4474976 bytes
+Time consumed to encode chunks to Base64: 0.0099 seconds
+Total save time taken: 1664697 milliseconds
+
+
+Size of original data: 5842628 bytes
+Size of compressed data: 5402908 bytes
+Total size of all chunks: 5402908 bytes
+Total number of chunks: 1320
+Time consumed to chunk the file: 0.0030 seconds
+Total size of encoded_chunks: 7207396 bytes
+Time consumed to encode chunks to Base64: 0.0144 seconds
+
+Size of original data: 11081517 bytes
+Size of compressed data: 1694115 bytes
+Total size of all chunks: 1694115 bytes
+Total number of chunks: 414
+Time consumed to chunk the file: 0.0010 seconds
+Total size of encoded_chunks: 2259924 bytes
+Time consumed to encode chunks to Base64: 0.0045 seconds

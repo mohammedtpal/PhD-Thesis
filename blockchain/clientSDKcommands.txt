@@ -1,0 +1,13 @@
+##to run the application:
+
+npm start
+
+##to save the change and recompile the applicaton:
+
+npm run build
+
+
+### the new version gives you the ability to send the file name during the code running like the following:
+
+
+

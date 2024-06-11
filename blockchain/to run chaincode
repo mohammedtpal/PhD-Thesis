@@ -6,13 +6,27 @@ run commnands for hyperledger:
   ./network.sh up createChannel -c mychannel -ca
   
   
-##to deploy smart contrac using the short command:
+##to deploy smart contrac using the short command: one for the data and the second for metadata samrt contracts
+##*****************************************************************************************************************************************
+# (- 1 -) # to run the contractFileChunks that is responsible for saving chunks data, you have to open the file the following path 
+	
+	path: /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/chaincode-go/assetTransfer_new.go
+	#and make sure from line number 11 to be like this:
+		"github.com/hyperledger/fabric-samples/asset-transfer-basic/chaincode-go/chaincode"
+	#then run the following command is the test network:
 
-./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
+		./network.sh deployCC -ccn contractFileChunks -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
 
-./network.sh deployCC -ccn basic1 -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
+# (- 2 -) # to run the contractFileMeta that is responsible for saving file meta-data, you have to open the file the following path:
+	path: /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/chaincode-go/assetTransfer_new.go
 
-  
+	#and make sure from line number 11 to be like this:
+		"github.com/hyperledger/fabric-samples/asset-transfer-basic/chaincode-go/chaincode2"
+	#then run the following command is the test network:
+
+		./network.sh deployCC -ccn contractFileMeta -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
+
+##*****************************************************************************************************************************************
 ## set the working peer:
 
 export PATH=${PWD}/../bin:$PATH
@@ -29,16 +43,16 @@ export CORE_PEER_ADDRESS=localhost:7051
 
 #	to write or save:
 	
-	peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n basic2 --peerAddresses localhost:7051 --tlsRootCertFiles /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"SaveFileEntry","Args":["file", "10" ]}'
+	peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n contractFileMeta --peerAddresses localhost:7051 --tlsRootCertFiles /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"SaveFileEntry","Args":["file", "10" ]}'
 
 	
 #	to read or query data:
 
-	peer chaincode query -c orderer.example.com:7050 -C mychannel -n basic1 --tls --cafile /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt -c "{\"Args\":[\"GetFileEntry\", \"file1\"]}"
+	peer chaincode query -c orderer.example.com:7050 -C mychannel -n contractFileMeta --tls --cafile /home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt -c "{\"Args\":[\"GetFileEntry\", \"file1\"]}"
 
 
 #file meta
-	peer chaincode query -C mychannel -n basic1 -c "{\"Args\":[\"GetFileEntry\", \"file\"]}"
+	peer chaincode query -C mychannel -n contractFileMeta -c "{\"Args\":[\"GetFileEntry\", \"file\"]}"
 	
 # file chunks	
-	peer chaincode query -C mychannel -n basic -c "{\"Args\":[\"QueryAsset\", \"5c782bf268c13893b7d1c7ffbbff0b2945778af13ab9b1c37cf89a939c945798\",\"2001\"]}"
+	peer chaincode query -C mychannel -n contractFileChunks -c "{\"Args\":[\"QueryAsset\", \"5c782bf268c13893b7d1c7ffbbff0b2945778af13ab9b1c37cf89a939c945798\",\"2001\"]}"

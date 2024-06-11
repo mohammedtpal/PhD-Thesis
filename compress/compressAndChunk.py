@@ -17,7 +17,7 @@ def compress_and_chunk(input_file, output_file, chunk_size):
             output_file.write(chunk)
 
 if __name__ == "__main__":
-    input_file = "OOP.pdf"  # Replace with your actual file name
+    input_file = "/home/muhammed/Documents/git hub/PhD-Thesis/TestFiles/5.8MB.pdf"  # Replace with your actual file name
     output_file = "output.bin"    # Replace with your desired output file name
     chunk_size = 1024              # Set your desired chunk size
 

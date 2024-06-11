@@ -1,0 +1,35 @@
+Time consumed to Compress the file: 0.0355 seconds
+Size of original data: 102602 bytes
+
+Time consumed to Compress the file: 0.1622 seconds
+Size of original data: 266603 bytes
+
+Time consumed to Compress the file: 0.1109 seconds
+Size of original data: 359075 bytes
+
+Time consumed to Compress the file: 0.1167 seconds
+Size of original data: 422552 bytes
+
+Time consumed to Compress the file: 0.2257 seconds
+Size of original data: 512088 bytes
+
+Time consumed to Compress the file: 0.1830 seconds
+Size of original data: 829048 bytes
+
+Time consumed to Compress the file: 0.3162 seconds
+Size of original data: 1052352 bytes
+
+Time consumed to Compress the file: 0.8857 seconds
+Size of original data: 1664464 bytes
+
+Time consumed to Compress the file: 0.6008 seconds
+Size of original data: 1821766 bytes
+
+Time consumed to Compress the file: 0.8994 seconds
+Size of original data: 4293938 bytes
+
+Time consumed to Compress the file: 1.3471 seconds
+Size of original data: 5842628 bytes
+
+Time consumed to Compress the file: 1.2286 seconds
+Size of original data: 11081517 bytes
