@@ -1,0 +1,38 @@
+# First you have to run the test network then run this command in the same terminal:
+
+	docker exec -it peer0.org1.example.com bash
+
+
+# Locate the Ledger Directory:
+
+	cd /var/hyperledger/production/ledgersData/chains/chains/mychannel
+
+# List the Block Files:
+	ls -lh
+
+# 
+peer channel fetch -c mychannel 0
+
+
+# How to Read Block in a Ledger.....................
+# first you have to list all dockers to select the intended docker:
+		docker ps
+
+# then chose the name that you want and the current channel name to get the general information:
+		**docker exec [container Name] peer channel getinfo -c [channel_name]
+	# for example if we want to see the information from peer0 in Org1 that used channel named with mychannel then:
+		docker exec peer0.org1.example.com peer channel getinfo -c mychannel
+			# example of the result: Blockchain info: {"height":3,"currentBlockHash":"mGahTEeSmag+4pzOdVVbUTkFts7C4X3K4Mi/lnDreO0=","previousBlockHash":"tvhWVfZGq92WkNhb6yK4i5vCWygOVJrsgnAwj+o8jbk="}
+			# here: height":3 means that we have 3 blocks in the ledger
+
+
+# Now to read any block data from the ledger we can use the following command:
+		**docker exec [container name] peer channel fetch [block_number] -c [channel_name] --orderer orderer.example.com
+	# for example if we want to see the information from peer0 in Org1 that used channel named with mychannel to read block number 1 then:
+		docker exec peer0.org1.example.com peer channel fetch 1  -c mychannel --orderer orderer.example.com
+
+	# then the result of the command will be a block data in a file named [channel_name]_[block_number].block saved inside the docker of peer0.org1.example.com
+	# so in our example we will have this result: mychannel_1.block
+	# to see the rsult we can list the files inside peer0.org1.example.com container using:
+		docker exec peer0.org1.example.com ls -l
+
