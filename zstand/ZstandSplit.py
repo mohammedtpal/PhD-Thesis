@@ -39,9 +39,11 @@ def hash_file_name(file_name):
     return hasher.hexdigest()
 
 if __name__ == "__main__":
-    fileName="4"
-    SavePathChunks="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/256KB-Chunk"
-    SavePathMeat="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/FilesMetaData"
+    fileName="1.5MB"
+    #SavePathChunks="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/256KB-Chunk"
+    SavePathChunks="/home/moh/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/256KB-Chunk"
+    #SavePathMeat="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/FilesMetaData"
+    SavePathMeat="/home/moh/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/FilesMetaData"
     input_file = f"TestFiles/{fileName}.pdf"  # Replace with your actual file name
     chunk_size = 256*1024  # Set your desired chunk size
 
