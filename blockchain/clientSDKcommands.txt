@@ -1,3 +1,17 @@
+#install npm
+#First of all try this
+
+sudo apt-get update
+sudo apt-get clean
+sudo apt-get autoremove
+
+# then run this:
+sudo apt install npm
+npm -v
+
+**************************************************************************
+
+
 ##to run the application:
 
 npm start
