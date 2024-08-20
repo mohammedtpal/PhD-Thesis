@@ -1,3 +1,4 @@
+
 #install npm
 #First of all try this
 
@@ -11,6 +12,23 @@ npm -v
 
 **************************************************************************
 
+
+# you have to go to the following path:
+	asset-transfer-basic/application-gateway-typescript
+	
+#then run the following command:
+	npm install
+
+## for me i face a problem in runnig this commad and the problem is the version of node js is not compitable with npm the solution is in the thired option of this link:
+	https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04a
+	
+	nvm use 18.19.0
+
+# To run the App you have to go the path of app (step one in this file) then run:
+	npm start
+
+# In case of updating the code of the App:
+	npm run build
 
 ##to run the application:
 
