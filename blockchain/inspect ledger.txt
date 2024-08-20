@@ -14,7 +14,11 @@
 peer channel fetch -c mychannel 0
 
 
+
+***************************************************************************************************
 # How to Read Block in a Ledger.....................
+***************************************************************************************************
+
 # first you have to list all dockers to select the intended docker:
 		docker ps
 
@@ -36,3 +40,7 @@ peer channel fetch -c mychannel 0
 	# to see the rsult we can list the files inside peer0.org1.example.com container using:
 		docker exec peer0.org1.example.com ls -l
 
+ ******************************************************************************************************
+ # How to install configtxlator 
+ ******************************************************************************************************
+ 
