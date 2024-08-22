@@ -2,8 +2,8 @@ run commnands for hyperledger:
 
 ##Start the network:
 
- ./network.sh down
-  ./network.sh up createChannel -c mychannel -ca
+./network.sh down
+./network.sh up createChannel -c mychannel -ca
   
   
 ##to deploy smart contrac using the short command: one for the data and the second for metadata samrt contracts
@@ -25,6 +25,8 @@ run commnands for hyperledger:
 	#then run the following command is the test network:
 
 		./network.sh deployCC -ccn contractFileMeta -ccp ../asset-transfer-basic/chaincode-go/ -ccl go
+		# another option to make the second chaincode in an new path and run it (now in chaincode-go2 )
+		./network.sh deployCC -ccn contractFileMeta -ccp ../asset-transfer-basic/chaincode-go2/ -ccl go
 
 ##*****************************************************************************************************************************************
 ## set the working peer:
@@ -56,3 +58,27 @@ export CORE_PEER_ADDRESS=localhost:7051
 	
 # file chunks	
 	peer chaincode query -C mychannel -n contractFileChunks -c "{\"Args\":[\"QueryAsset\", \"5c782bf268c13893b7d1c7ffbbff0b2945778af13ab9b1c37cf89a939c945798\",\"2001\"]}"
+#########################################################
+
+######Put All to gather:
+
+#########################################################
+
+# you can do depoy everthing togather by making a batch file and run it 
+
+	# Create the Script File
+		nano run-network.sh
+
+	# Add the Commands
+		#!/bin/bash
+
+		./network.sh down && \
+		./network.sh up createChannel -c mychannel -ca && \
+		./network.sh deployCC -ccn contractFileChunks -ccp ../asset-transfer-basic/chaincode-go/ -ccl go && \
+		./network.sh deployCC -ccn contractFileMeta -ccp ../asset-transfer-basic/chaincode-go2/ -ccl go
+	
+	# Make the Script Executable
+		chmod +x run-network.sh
+	
+	# Run the Script
+	./run-network.sh

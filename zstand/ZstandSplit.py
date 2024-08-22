@@ -39,7 +39,7 @@ def hash_file_name(file_name):
     return hasher.hexdigest()
 
 if __name__ == "__main__":
-    fileName="1.5MB"
+    fileName="10.5MB"
     #SavePathChunks="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/256KB-Chunk"
     SavePathChunks="/home/moh/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/256KB-Chunk"
     #SavePathMeat="/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/FilesMetaData"

@@ -45,11 +45,14 @@ if __name__ == "__main__":
     output_file = "reconstructed_File.pdf"  # Replace with your desired output file name
 
     # Check if the file exists
-    if not os.path.isfile("/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/result.txt"):
+    #if not os.path.isfile("/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/result.txt"):
+    if not os.path.isfile("/home/moh/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/result.txt"):
+
         print(f"Error: File not found.")
     else:
         # Read the encoded chunks from the file
-        with open("/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/result.txt", "r") as input_file:
+        #with open("/home/muhammed/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/result.txt", "r") as input_file:
+        with open("/home/moh/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/asset-transfer-basic/application-gateway-typescript/result.txt", "r") as input_file:
             encoded_chunks = [line.strip() for line in input_file]
 
         # Decode Base64 to bytes
