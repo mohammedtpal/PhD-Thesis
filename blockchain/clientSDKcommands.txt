@@ -1,3 +1,18 @@
+
+#install npm
+#First of all try this
+
+sudo apt-get update
+sudo apt-get clean
+sudo apt-get autoremove
+
+# then run this:
+sudo apt install npm
+npm -v
+
+**************************************************************************
+
+
 # you have to go to the following path:
 	asset-transfer-basic/application-gateway-typescript
 	
@@ -14,6 +29,7 @@
 
 # In case of updating the code of the App:
 	npm run build
+
 ##to run the application:
 
 npm start
