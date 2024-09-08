@@ -12,3 +12,34 @@ cd /var/hyperledger/production/
 
 # then you can list the folder and thier sizes:
 du -sh *
+
+
+#some important information to run the explorer correctly
+we have to delete the organization folder and copy it after running the fabric network:
+  sudo cp -r /home/moh/go/src/github.com/mohammedt.pal@gmail.com/fabric-samples/test-network/organizations /home/moh/explorer
+  sudo chmod -R 777 organizations
+the we have to update the content of test-network.json file which located in (./explorer/connection-profile/test-network.json):
+  "adminPrivateKey": 
+				"path": "/tmp/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/XXXXXXX
+#replace XXXXX with the correct file name 
+&&&
+"peers": ["peer0.org1.example.com"],
+			"signedCert": {
+				"path": "/tmp/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/cert.pem"
+
+# make sure that cert.pem is the same name in the path or correct it
+
+
+--*************************************************************************************************************************
+after more than 7 days of trying to run the explorer the problem that prevents the explorer for accessing mychannel was:
+--*************************************************************************************************************************
+ the "wallet" directory typically contains files related to the identities and credentials used by Explorer to interact with the blockchain network.
+ If there's an issue with invalid signing identities, clearing this wallet directory can help resolve it.
+ and to solve it you have to enter the wallet of the (explorer.mynetwork.com) and delete it content using the following:
+      docker exec -it explorer.mynetwork.com sh
+      cd /opt/explorer/wallet
+      rm -rf /opt/explorer/wallet/*
+
+      then we have to clear the explorer and run it again:
+        docker-compose down
+        sudo docker-compose up --build

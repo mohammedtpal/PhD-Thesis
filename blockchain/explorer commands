@@ -1,0 +1,14 @@
+# Check if peer0.org1.example.com is running: 
+    docker ps | grep peer0.org1.example.com
+# list the networks and check which containers are part of it:
+    docker network ls
+    docker network inspect <network_name>
+
+# If the containers are not on the same network, you can connect them using:
+    docker network connect <network_name> <container_name>
+    example:    docker network connect fabric_test peer0.org1.example.com
+
+# Check logs for peer
+    docker logs peer0.org1.example.com
+...
+docker-compose up --build
